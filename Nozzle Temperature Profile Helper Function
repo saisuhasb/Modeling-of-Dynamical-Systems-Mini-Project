@@ -1,0 +1,21 @@
+tt = [25, 0, 0];
+
+function ttd = tprof(tt , un)
+
+Te = 25;
+Rn  = 14.4;
+Ctn = 9.0; 
+Rtn = 5.0; 
+Ln  = 1e-3;  
+Cn  = 100e-6;
+Tn = tt(1);
+in = tt(2);
+urn = tt(3);
+
+ttd1 = (urn ^ 2)/(Rn * Ctn) - (Tn - Te)/(Rtn * Ctn);
+ttd2 = (un - urn)/Ln;
+ttd3 = (in - (urn/Rn))/Cn;
+
+ttd = [ttd1; ttd2; ttd3];
+
+end
